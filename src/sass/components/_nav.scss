@@ -1,0 +1,16 @@
+.nav {
+  font-family: "Karla", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 2rem;
+  padding: 1rem;
+
+  grid-column: 3/11;
+
+  &_link {
+    text-decoration: none;
+    color: $color-black;
+  }
+}
