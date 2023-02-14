@@ -3,7 +3,9 @@ import React from "react";
 function Button(props) {
   return (
     <div className={props.class}>
-      <button className="btn">{props.text}</button>
+      <a href={props.link}>
+        <button className="btn">{props.text}</button>
+      </a>
     </div>
   );
 }

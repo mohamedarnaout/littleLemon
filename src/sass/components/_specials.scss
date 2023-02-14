@@ -1,0 +1,13 @@
+.specials {
+  margin-top: 6rem;
+  &_header {
+    grid-column: 3/5;
+    font-size: 4rem;
+    color: $color-black;
+    font-family: "Karla", serif;
+  }
+  &_btn {
+    grid-column: 9/11;
+    padding-left: 5.5rem;
+  }
+}

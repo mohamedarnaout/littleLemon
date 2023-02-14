@@ -11,7 +11,11 @@ function About() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <Button class="about_text-btn" text="Reserve a Table" />
+        <Button
+          class="about_text-btn"
+          text="Reserve a Table"
+          link="https://www.youtube.com/watch?v=6hOoQfF0KRM"
+        />
       </div>
       <div className="about_pic">
         <img src={pic} alt="food pic" className="about_pic-img" />
