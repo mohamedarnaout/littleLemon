@@ -8,6 +8,11 @@
   }
   &_btn {
     grid-column: 9/11;
-    padding-left: 5.5rem;
+    padding-left: 5.4rem;
   }
+}
+.Cards {
+  grid-column: 3/11;
+  display: flex;
+  justify-content: space-between;
 }

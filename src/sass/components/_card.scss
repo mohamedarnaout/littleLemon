@@ -1,15 +1,40 @@
 .card {
   background-color: $color-grey-light;
-  width: 30rem;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 25rem;
+  margin-top: 2rem;
+  font-family: "Karla", sans-serif;
+
   &-pic {
     width: 100%;
-    height: 20rem;
+    height: 17rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  &-content {
+    padding: 1rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
   }
   &-header {
+    font-family: "Markazi Text", serif;
   }
   &-price {
+    color: $color-tertiary;
+    font-size: 1.5rem;
   }
   &-par {
+    font-size: 1.5rem;
+    color: $color-primary;
   }
   &-footer {
   }
