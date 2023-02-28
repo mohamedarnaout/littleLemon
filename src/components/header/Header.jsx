@@ -1,44 +1,45 @@
 import React from "react";
 import logo from "../../media/icons_assets/Logo.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <nav className="grid">
       <ul className="nav">
         <li className="nav_pic">
-          <a href="#">
+          <Link to="/">
             <img src={logo} alt="" />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="/" className="nav_link">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="#" className="nav_link">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="#" className="nav_link">
             menu
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="/booking" className="nav_link">
             reservations{" "}
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="#" className="nav_link">
             order online
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className="nav_link">
+          <Link to="#" className="nav_link">
             login
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
