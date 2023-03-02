@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../../Button/Button";
-import pic from "../../../media/icons_assets/restauranfood.jpg";
+import Button from "../Button/Button";
+import pic from "../../media/restauranfood.jpg";
 function About() {
   return (
     <div className="grid about">

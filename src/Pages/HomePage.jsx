@@ -1,10 +1,12 @@
 import React from "react";
-import Main from "../components/main/Main";
 
+import About from "../components/About/About";
+import Specials from "../components/Specials/Specials";
 function HomePage() {
   return (
     <div>
-      <Main />
+      <About />
+      <Specials />
     </div>
   );
 }
