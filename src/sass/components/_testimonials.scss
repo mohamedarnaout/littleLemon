@@ -1,0 +1,51 @@
+.testimonials {
+  margin: 5rem 0;
+  height: 50rem;
+  background-color: $color-primary-light;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &_header {
+    padding: 5rem;
+    font-family: "Markazi Text", serif;
+    font-size: 6rem;
+  }
+  &_container {
+    grid-column: 3/11;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.testimonial {
+  background-color: $color-primary-dark;
+  width: 20%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3rem;
+  padding: 0 2rem;
+  justify-content: start;
+  &_pic {
+    width: 7rem;
+    border-radius: 50%;
+    transform: translateY(-2rem);
+  }
+  &_heading {
+    font-size: 2rem;
+    color: $color-grey-light;
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+  }
+  &_par {
+    font-size: 1.2rem;
+    color: $color-grey-light;
+  }
+  &-con {
+    display: flex;
+    align-items: start;
+    &-logo {
+      width: 2.5rem;
+    }
+  }
+}
