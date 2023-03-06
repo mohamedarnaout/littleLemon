@@ -1,0 +1,15 @@
+.footer {
+  background-color: $color-grey-light;
+  margin-top: 5rem;
+  &-grid {
+    grid-column: 3/11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 25rem;
+  }
+  &_img {
+    width: 7rem;
+    height: 15rem;
+  }
+}
