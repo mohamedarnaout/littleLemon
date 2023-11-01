@@ -1,12 +1,19 @@
 import { useState } from "react";
 
-function BookingForm() {
+function BookingForm({ availableTimes }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+
   const [num, setNum] = useState("");
   const [occasion, setOccasion] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setDate("");
+    setTime("");
+    setNum("");
+    setOccasion("");
+
     console.log(date);
     console.log(time);
     console.log(num);
@@ -32,12 +39,11 @@ function BookingForm() {
           <option value="" disabled selected>
             Select your time
           </option>
-          <option>17:00</option>
-          <option>18:00</option>
-          <option>19:00</option>
-          <option>20:00</option>
-          <option>21:00</option>
-          <option>22:00</option>
+          {availableTimes.map((availableTime, index) => (
+            <option key={index} value={availableTime}>
+              {availableTime}
+            </option>
+          ))}
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
