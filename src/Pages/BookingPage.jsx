@@ -1,9 +1,9 @@
 import BookingForm from "../components/bookingForm/BookingForm";
 import { useReducer } from "react";
+
 const updateTimes = (availableTimes, action) => {
-  if (action.type === "Monday")
-    return { availableTimes: availableTimes.push("15:00") };
-  return availableTimes;
+  if (action.type === "Monday") return [...availableTimes, "15:00"];
+  return availableTimes.push("15:00");
 };
 
 function BookingPage() {
@@ -14,10 +14,16 @@ function BookingPage() {
     "20:00",
     "21:00",
   ]);
-
+  function initializeTimes() {
+    return availableTimes.map((availableTime, index) => (
+      <option key={index} value={availableTime}>
+        {availableTime}
+      </option>
+    ));
+  }
   return (
     <div>
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      <BookingForm dispatch={dispatch} initializeTimes={initializeTimes} />
     </div>
   );
 }

@@ -1,18 +1,12 @@
 import { useState } from "react";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ dispatch, initializeTimes }) {
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
 
   const [num, setNum] = useState("");
   const [occasion, setOccasion] = useState("");
-  function initializeTimes() {
-    availableTimes.map((availableTime, index) => (
-      <option key={index} value={availableTime}>
-        {availableTime}
-      </option>
-    ));
-  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setDate("");
@@ -34,7 +28,8 @@ function BookingForm({ availableTimes, dispatch }) {
           type="date"
           id="res-date"
           value={date}
-          onClick={() => {
+          onChange={(e) => {
+            setDate(e.target.value);
             dispatch({ type: "Monday" });
           }}
         />
@@ -47,6 +42,7 @@ function BookingForm({ availableTimes, dispatch }) {
           <option value="" disabled selected>
             Select your time
           </option>
+          {initializeTimes()}
         </select>
         <label htmlFor="guests">Number of guests</label>
         <input
