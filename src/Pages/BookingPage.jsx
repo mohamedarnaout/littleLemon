@@ -14,10 +14,17 @@ function BookingPage() {
     "20:00",
     "21:00",
   ]);
-
+  function initializeTimes() {
+    return availableTimes.map((availableTime, index) => (
+      <option key={index} value={availableTime}>
+        {availableTime}
+      </option>
+    ));
+  }
   return (
     <div>
-      <BookingForm dispatch={dispatch} availableTimes={availableTimes} />
+      <h1>Book Now</h1>
+      <BookingForm dispatch={dispatch} initializeTimes={initializeTimes} />
     </div>
   );
 }
